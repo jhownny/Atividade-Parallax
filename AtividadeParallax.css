@@ -22,14 +22,17 @@ body{
 .container{
     display: grid;
     grid-template: 50vh 78vh 60vh;
-    grid-template-areas: "h h m" "a a m" "a a m" "a2 a2 a2" ;
+    grid-template-areas: "h h h" "a a m" "a a m" "a2 a2 a2" ;
     grid-column-gap: 5%;
     grid-row-end: 5%;
     grid-gap: 0.1em;
 
 }
 .textinho{
-    padding: 5%;
+    padding: 2%;
+}
+.textinho2{
+    padding: 2%;
 }
 header{
     background: #000000;
@@ -40,16 +43,16 @@ header{
 main{
     background: #000000;
     grid-area: m;
-    height: 136vh;
+    height: 80vh;
     border: 2px solid rgb(0, 0, 0);
+    margin-left: 50%;
 }
-
 aside{
     background: #000000;
     grid-area: a;
     padding-top: 50%;
     border: 2px solid rgb(197, 197, 197);
-    
+    padding-right: 237%;
 }
 article{
     background: #000000;
