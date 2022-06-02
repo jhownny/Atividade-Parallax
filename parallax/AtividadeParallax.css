@@ -49,7 +49,7 @@ aside{
     grid-area: a;
     padding-top: 50%;
     border: 2px solid rgb(197, 197, 197);
-    padding-right: 237%;
+    
 }
 .parallox{
     background-image: url("/img/pexels-designecologist-887353.jpg");
@@ -123,7 +123,7 @@ img{
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 10px; ;
+    border-radius: 10px;
     width: 100%;
     height: 100%;
 }
@@ -135,7 +135,7 @@ img{
     text-decoration: none;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 30%;
     margin: 0 0 0.5em 0;
     position: relative;
 }
@@ -144,4 +144,17 @@ img{
 }
 .slider >a:focus{
     background: black;
+}
+/* resposividade */
+@media screen and (max-width: 640px){
+    .container{
+        grid-template-areas:"h h h" "m m m" " a a a" "a2 a2 a2 ";
+    }
+    main{
+        grid-area: m;
+        height: 10vh;
+        width: 20vh;
+        margin-top: 73%;
+       margin-right: 500%;
+    }
 }
