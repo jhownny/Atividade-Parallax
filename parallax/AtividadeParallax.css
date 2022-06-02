@@ -1,0 +1,147 @@
+*{
+   text-decoration: none;
+}
+body{
+    background: black;
+    height: 100%;
+}
+.parallax{
+    background-image: url("/img/pexels-dastan-khdir-9277357.jpg");
+
+    /* Define uma altura para a visão que o usuário terá da imagem */
+    min-height: 30em;
+    min-width: 10em;
+    
+
+    /* Define o background como fixo e posiciona a imagem */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    display: grid;
+    grid-template: 50vh 78vh 60vh;
+    grid-template-areas: "h h h" "a a m" "a a m" "a2 a2 a2" ;
+    grid-column-gap: 5%;
+    grid-row-end: 5%;
+    grid-gap: 0.1em;
+
+}
+.textinho{
+    padding: 2%;
+}
+header{
+    background: #000000;
+    grid-area: h;
+    height: 50vh;
+    border: 2px solid rgb(0, 0, 0);
+}
+main{
+    background: #000000;
+    grid-area: m;
+    height: 80vh;
+    border: 2px solid rgb(0, 0, 0);
+    margin-left: 50%;
+}
+aside{
+    background: #000000;
+    grid-area: a;
+    padding-top: 50%;
+    border: 2px solid rgb(197, 197, 197);
+    padding-right: 237%;
+}
+.parallox{
+    background-image: url("/img/pexels-designecologist-887353.jpg");
+
+    /* Define uma altura para a visão que o usuário terá da imagem */
+    min-height: 8.3em;
+    min-width: 10em;
+
+
+    /* Define o background como fixo e posiciona a imagem */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* daqui para baixo é a configuração do carousel */
+article{
+    background: #000000;
+    grid-area: a2;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+.slider{
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+}
+.CarouselImagens{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+.CarouselImagens::-webkit-scrollbar{
+    width: 20px;
+    height: 20px;
+}
+.CarouselImagens::-webkit-scrollbar-thumb{
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.CarouselImagens::-webkit-scrollbar-track{
+    background: transparent;
+}
+.CarouselImagens>div{
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #fff;
+    transform-origin:  center center;
+    transform: scale(1) ;
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: #fff;
+}
+img{
+    z-index: -1;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px; ;
+    width: 100%;
+    height: 100%;
+}
+.slider > a{
+    display: inline-flex;
+    width: 1.5em;
+    height: 1.5em;
+    background: #fff;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5em 0;
+    position: relative;
+}
+.slider> a:active{
+    top: 1px;
+}
+.slider >a:focus{
+    background: black;
+}
