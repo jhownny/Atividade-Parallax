@@ -1,72 +1,3 @@
-*{
-   text-decoration: none;
-}
-body{
-    background: black;
-    height: 100%;
-}
-.parallax{
-    background-image: url("/img/pexels-dastan-khdir-9277357.jpg");
-
-    /* Define uma altura para a visão que o usuário terá da imagem */
-    min-height: 30em;
-    min-width: 10em;
-    
-
-    /* Define o background como fixo e posiciona a imagem */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.container{
-    display: grid;
-    grid-template: 50vh 78vh 60vh;
-    grid-template-areas: "h h h" "a a m" "a a m" "a2 a2 a2" ;
-    grid-column-gap: 5%;
-    grid-row-end: 5%;
-    grid-gap: 0.1em;
-
-}
-.textinho{
-    padding: 2%;
-}
-header{
-    background: #000000;
-    grid-area: h;
-    height: 50vh;
-    border: 2px solid rgb(0, 0, 0);
-}
-main{
-    background: #000000;
-    grid-area: m;
-    height: 80vh;
-    border: 2px solid rgb(0, 0, 0);
-    margin-left: 50%;
-}
-aside{
-    background: #000000;
-    grid-area: a;
-    padding-top: 50%;
-    border: 2px solid rgb(197, 197, 197);
-    
-}
-.parallox{
-    background-image: url("/img/pexels-designecologist-887353.jpg");
-
-    /* Define uma altura para a visão que o usuário terá da imagem */
-    min-height: 8.3em;
-    min-width: 10em;
-
-
-    /* Define o background como fixo e posiciona a imagem */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* daqui para baixo é a configuração do carousel */
 article{
     background: #000000;
     grid-area: a2;
@@ -77,7 +8,7 @@ article{
     font-family: 'Roboto', sans-serif;
 }
 .slider{
-    width: 300px;
+    width: 130VH;
     text-align: center;
     overflow: hidden;
 }
@@ -148,13 +79,13 @@ img{
 /* resposividade */
 @media screen and (max-width: 640px){
     .container{
-        grid-template-areas:"h h h" "m m m" " a a a" "a2 a2 a2 ";
+        grid-template-areas:"h h h" "a a a" "m m m" "a2 a2 a2 ";
     }
     main{
         grid-area: m;
         height: 10vh;
-        width: 20vh;
-        margin-top: 73%;
-       margin-right: 500%;
+        width: 100vh;
+        padding-left: 100%;
     }
+    
 }
