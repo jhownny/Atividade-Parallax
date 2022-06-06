@@ -81,11 +81,33 @@ img{
     .container{
         grid-template-areas:"h h h" "a a a" "m m m" "a2 a2 a2 ";
     }
+    header{
+        grid-area: h;
+        height: 50vh;
+        width: 94%;
+        margin-right: 50vh;
+    }
+    aside{
+        grid-area: a;
+        margin-top: 127vh;
+        margin-left: 3vh;
+        width: 1vh;
+        height: 50vh;
+        padding-right: 45vh;
+    }
     main{
         grid-area: m;
-        height: 10vh;
-        width: 100vh;
-        padding-left: 100%;
+        height: 50vh;
+        width: 74vh;
+        margin-left: 0vh;
+        margin-top: 0vh;
     }
+    article{
+        grid-area: a2;
+        margin-top: 10vh;
+    }.slider{
+        width: 50VH;
+    }
+
     
 }
